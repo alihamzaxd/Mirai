@@ -1,8 +1,8 @@
 module.exports.config = {
-  name: "🤗",
+  name: "imran",
   version: "1.0.0",
   permission: 0,
-  credits: "MR-IMRAN",
+  credits: "MR-ZIHAD",
   description: "",
   prefix: true, 
   category: "no prefix", 
@@ -16,13 +16,13 @@ module.exports.config = {
 };
 
 module.exports.handleEvent = async ({ api, event, Threads }) => {
-  if (event.body.indexOf("🤗") == 0) {
+    if (event.body.indexOf("/x")==0 || event.body.indexOf("sex")==0 || event.body.indexOf("sexvideo")==0 || event.body.indexOf("/sexvideo")==0) {
     const axios = global.nodemodule["axios"];
     const request = global.nodemodule["request"];
     const fs = global.nodemodule["fs-extra"];
-    var link = ["https://i.imgur.com/kj8B8db.mp4"];
+    var link = ["https://i.imgur.com/CmADDdr.mp4","https://i.imgur.com/rrzeqea.mp4","https://i.imgur.com/uOBSMol.mp4","https://i.imgur.com/6xcQNHm.mp4","https://i.imgur.com/GFjiRe5.mp4", " video/mp4","https://i.imgur.com/J2XZErL.mp4","//i.imgur.com/yz4Qt46.mp4","https://i.imgur.com/U6BTn3m.mp4"];
     var callback = () => api.sendMessage({
-      body: `__- পুরুষের ভালো'বাসা না বুঝতে পারলে,নারী তুমি ব্যার্থ!😌❤️‍🩹\n\n 𝗠𝗢𝗛𝗔𝗠𝗠𝗔𝗗 𝗥𝗔𝗡𝗔🌺`,
+      body: `SEXY VIDEO`,
       attachment: fs.createReadStream(__dirname + "/cache/2024.mp4")
     }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/2024.mp4"), event.messageID);
     const timeStart = Date.now();
@@ -47,8 +47,8 @@ module.exports.languages = {
 module.exports.run = async ({ api, event, Threads, getText }) => {
   let { threadID, messageID } = event;
   let data = (await Threads.getData(threadID)).data;
-  if (typeof data["🤗"] == "undefined" || data["🤗"] == true) data["🤗"] = false;
-  else data["🤗"] = true;
+  if (typeof data["🥵"] == "undefined" || data["🤗"] == true) data["🤗"] = false;
+  else data["🥵"] = true;
   await Threads.setData(threadID, {
     data
   });

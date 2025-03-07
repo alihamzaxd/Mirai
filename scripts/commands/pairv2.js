@@ -19,7 +19,7 @@ module.exports.onLoad = async() => {
     const dirMaterial = __dirname + `/cache/canvas/`;
     const path = resolve(__dirname, 'cache/canvas', 'pairing.png');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.postimg.cc/X7R3CLmb/267378493-3075346446127866-4722502659615516429-n.png", path);
+    if (!existsSync(path)) await downloadFile("", path);
 }
 
 async function makeImage({ one, two }) {
@@ -35,10 +35,13 @@ async function makeImage({ one, two }) {
     let avatarTwo = __root + `/avt_${two}.png`;
 
     let getAvatarOne = (await axios.get(`https://graph.facebook.com/${one}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
-    fs.writeFileSync(avatarOne, Buffer.from(getAvatarOne, 'utf-8'));
+    fs.writeFileSync(__dirname + "/cache/avt.png, Buffer.from(getAvatarOne, 'utf-8'));
 
+    let gifLove = (await axios.get(`https://i.ibb.co/y4dWfQq/image.gif`, { responseType: "arraybuffer" })).data;
+    fs.writeFileSync(__dirname + "/cache/giflove.png", Buffer.frocache/giflove.pngm(gifLove, "utf-8"));
+  
     let getAvatarTwo = (await axios.get(`https://graph.facebook.com/${two}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
-    fs.writeFileSync(avatarTwo, Buffer.from(getAvatarTwo, 'utf-8'));
+    fs.writeFileSync(__dirname + "/cache/avt2.png, Buffer.from(getAvatarTwo, 'utf-8'));
 
     let circleOne = await jimp.read(await circle(avatarOne));
     let circleTwo = await jimp.read(await circle(avatarTwo));

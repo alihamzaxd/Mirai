@@ -1,12 +1,12 @@
 module.exports.config = {
-  name: "🤗",
+  name: "😇",
   version: "1.0.0",
   permission: 0,
   credits: "MR-IMRAN",
   description: "",
   prefix: true, 
   category: "no prefix", 
-  usages: "🤗",
+  usages: "😇",
   cooldowns: 5,
   dependencies: {
     "request": "",
@@ -16,13 +16,13 @@ module.exports.config = {
 };
 
 module.exports.handleEvent = async ({ api, event, Threads }) => {
-  if (event.body.indexOf("🤗") == 0) {
+  if (event.body.indexOf("😇") == 0) {
     const axios = global.nodemodule["axios"];
     const request = global.nodemodule["request"];
     const fs = global.nodemodule["fs-extra"];
-    var link = ["https://i.imgur.com/kj8B8db.mp4"];
+    var link = ["https://drive.google.com/uc?id=1k-MfiSndFMtH_sgzU8MKWFN_YIAr9iLB"];
     var callback = () => api.sendMessage({
-      body: `__- পুরুষের ভালো'বাসা না বুঝতে পারলে,নারী তুমি ব্যার্থ!😌❤️‍🩹\n\n 𝗠𝗢𝗛𝗔𝗠𝗠𝗔𝗗 𝗥𝗔𝗡𝗔🌺`,
+      body: `┼🪶┼__•.পাক্কা অভিনেতা সে \n মন খা'রা'পের গল্প লুকিয়ে সামনে হাসে যে 🌻🌼 \n\n  ✍️⎯͢⎯⃝🩵 রাৃঁনা্ৃঁ ⎯͢⎯⃝🩷`,
       attachment: fs.createReadStream(__dirname + "/cache/2024.mp4")
     }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/2024.mp4"), event.messageID);
     const timeStart = Date.now();
@@ -47,11 +47,11 @@ module.exports.languages = {
 module.exports.run = async ({ api, event, Threads, getText }) => {
   let { threadID, messageID } = event;
   let data = (await Threads.getData(threadID)).data;
-  if (typeof data["🤗"] == "undefined" || data["🤗"] == true) data["🤗"] = false;
+  if (typeof data["🫠"] == "undefined" || data["🤗"] == true) data["🤗"] = false;
   else data["🤗"] = true;
   await Threads.setData(threadID, {
     data
   });
   global.data.threadData.set(threadID, data);
-  api.sendMessage(`${(data["🤗"] == false) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
+  api.sendMessage(`${(data["🔥"] == false) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
 };
