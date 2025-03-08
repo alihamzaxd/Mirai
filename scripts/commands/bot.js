@@ -8,7 +8,7 @@ module.exports = {
     version: "1.0.0",
     permission: 0,
     credits: "nayan",
-    description: "talk with bot",
+    description: "talk with-bot",
     prefix: 'awto',
     category: "talk",
     usages: "hi",
