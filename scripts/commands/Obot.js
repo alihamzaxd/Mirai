@@ -113,7 +113,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
    };
 
    if ((event.body.toLowerCase() == "name") || (event.body.toLowerCase() == "name") || (event.body.toLowerCase() == "tumar nam ki")) {
-     return api.sendMessage("️MY NAME IS °_>👅-✘ robot🤖 : ) 🎀 🍒", threadID);
+     return api.sendMessage("️MY NAME IS \n°_>👅-✘ ZIHAD-BOT 🤖 : ) 🎀 🍒", threadID);
    };
 
    if ((event.body.toLowerCase() == "BOT ER BACCHA") || (event.body.toLowerCase() == "বট এর বাচ্চা বট")) {
@@ -165,7 +165,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
    };
 
    if ((event.body.toLowerCase() == "i love") || (event.body.toLowerCase() == "Love you") || (event.body.toLowerCase() == "I Love You") || (event.body.toLowerCase() == "ভালোবাসি") || (event.body.toLowerCase() == "i love you")) {
-     return api.sendMessage("হুম আমার বস ZIHAD ও তেমাকে ভালোবাসে🥰🥱", threadID);
+     return api.sendMessage("I love You tooo janu amar kolixa amar ummmmmmmmmmahhhhh 😘😘😘😘😘", threadID);
    };
 
      if ((event.body.toLowerCase() == "বায়") || (event.body.toLowerCase() == "বাই") || (event.body.toLowerCase() == "jaiga") || (event.body.toLowerCase() == "বাই") || (event.body.toLowerCase() == "pore kotha hbe") || (event.body.toLowerCase() == "যাই গা")) {
