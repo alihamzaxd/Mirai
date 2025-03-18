@@ -155,7 +155,7 @@ try{
 module.exports.handleEvent = async function ({ api, event }) {
 try{
     const body = event.body ? event.body.toLowerCase() : ""
-    if(body.startsWith("mim") || body.startsWith("hi") || body.startsWith("minu") || body.startsWith("bby") || body.startsWith("baby") || body.startsWith("মিম") || body.startsWith("janu")){
+    if(body.startsWith("mim") || body.startsWith("fariya") || body.startsWith("minu") || body.startsWith("bby") || body.startsWith("baby") || body.startsWith("মিম") || body.startsWith("janu")){
         const arr = body.replace(/^\S+\s*/, "")
       if(!arr) {
                                      await api.sendMessage("Yes 😀, i am here ", event.threadID, (error, info) => {
